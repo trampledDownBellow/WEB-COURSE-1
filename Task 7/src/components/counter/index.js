@@ -5,41 +5,37 @@ import GoodsComponent from '../goods';
 
 const CounterComponent = (props) => {
   const { selectedGoods, addGoods } = useContext(GoodsContext);
-  const goods = props.data
-  const [data] = useState(goods);
+  const goods = props.data;
+  const [data] = useState(Array.isArray(goods) ? goods : []);
   let sortedData = [...data];
   sortedData = sortedData.sort((a, b) => b.cost - a.cost);
   let limit = 40;
   let newArray = [];
 
   const autoDetectClick = () => {
-    let currentSum = 0;
-    let minSum = Number.MAX_SAFE_INTEGER;
-    let bestCombination = [];
-    const tempArray = sortedData.map(item => item);
+    let sum = 0;
 
-    const findCombination = (index, sum, combination) => {
-      if (sum >= 40 && sum < minSum) {
-        minSum = sum;
-        bestCombination = [...combination];
-      }
-      if (sum >= 40) {
-        return;
-      }
-      for (let i = index; i < tempArray.length; i++) {
-        if (sum + tempArray[i].cost <= limit) {
-          combination.push(tempArray[i]);
-          findCombination(i + 1, sum + tempArray[i].cost, combination);
-          combination.pop();
+    while (sum !== limit) {
+      for (const item of sortedData) {
+        sum = newArray.reduce((acc, cur) => acc + cur.cost, 0);
+        if (!newArray.includes(item)) {
+          if (sum + item.cost <= limit) {
+            newArray.push(item);
+            sum += item.cost;
+          }
+        }
+        if (sum === limit) {
+          break;
         }
       }
-    };
+      if (sum === limit) {
+        break;
+      }
+      limit++;
+    }
 
-    findCombination(0, currentSum, []);
-
-    bestCombination.forEach(item => addGoods(item));
+    newArray.forEach(item => addGoods(item));
   };
-
 
   let sum = selectedGoods.reduce((acc, cur) => {
     return acc + cur.cost;
