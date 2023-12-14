@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Калькулятор</title>
+</head>
+<script src="./script.js"></script>
+
+<body>
+    <h1>Онлайн калькулятор</h1>
+    <h2>Площа трикутника за трьома сторонами</h2>
+    <label>Сторона A: <input type="number" id="sideA"></label><br>
+    <label>Сторона B: <input type="number" id="sideB"></label><br>
+    <label>Сторона C: <input type="number" id="sideC"></label><br>
+    <button onclick="TriangleArea_Sides()">Розрахувати</button>
+    <p id="result_Sides"></p>
+
+    <h2>Площа трикутника за двома сторонами і кутом</h2>
+    <label>Сторона 1: <input type="number" id="side1"></label><br>
+    <label>Сторона 2: <input type="number" id="side2"></label><br>
+    <label>Кут (градуси): <input type="number" id="angle"></label><br>
+    <button onclick="TriangleArea_Sides_Angle()">Розрахувати</button>
+    <p id="result_Sides_Angle"></p>
+
+    <h2>Площа трикутника за стороною і висотою</h2>
+    <label>Сторона: <input type="number" id="side"></label><br>
+    <label>Висота: <input type="number" id="height"></label><br>
+    <button onclick="TriangleArea_Side_Height()">Розрахувати</button>
+    <p id="result_Side_Height"></p>
+
+    <h2>Площа трикутника за трьома сторонами і радіусом описаного кола</h2>
+    <label>Сторона A: <input type="number" id="sideA2"></label><br>
+    <label>Сторона B: <input type="number" id="sideB2"></label><br>
+    <label>Сторона C: <input type="number" id="sideC2"></label><br>
+    <label>Радіус описаного кола: <input type="number" id="radius"></label><br>
+    <button onclick="TriangleArea_Sides_Radius()">Розрахувати</button>
+    <p id="result_Sides_Radius"></p>
+
+    <h2>Перевірка на паліндром</h2>
+    <label>Число або слово: <input type="text" id="input_Palindrome"></label><br>
+    <button onclick="Palindrome()">Перевірити</button>
+    <p id="palindrome_Result"></p>
+
+    <h2>Перевірка на анаграму</h2>
+    <label>Перше слово: <input type="text" id="word1"></label><br>
+    <label>Друге слово: <input type="text" id="word2"></label><br>
+    <button onclick="Anagram()">Перевірити</button>
+    <p id="anagram_Result"></p>
+
+    <h2>Числа Фібоначчі</h2>
+    <label>Порядковий номер: <input type="number" id="fibIndex"></label><br>
+    <button onclick="find_Fibonacci()">Знайти</button>
+    <p id="fibonacci_Result"></p>
+
+    <h2>Перевірка належності до послідовності Фібоначчі</h2>
+    <label>Число: <input type="number" id="fibCheck"></label><br>
+    <button onclick="check_Fibonacci()">Перевірити</button>
+    <p id="fibonacci_Check_Result"></p>
+
+</body>
+
+</html>

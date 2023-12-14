@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+
+}
+
+
+.top-section {
+    flex: 1;
+    background-color: #263149;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.bottom-section {
+    flex: 1;
+    background-color: #CAD3E6;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.third-section {
+    text-align: center;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    z-index: 1;
+
+}
+
+#pictures {
+    text-align: center;
+    width: calc();
+    display: flex;
+}
+
+.section {
+    width: 50%;
+    height: 100%;
+}
+
+.bpig {
+    width: 100%;
+    height: 55%;
+    background-size: cover;
+    background-position: center;
+}
+
+.subselect {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    background-position: center;
+}
+
+.text {
+    font-size: x-large;
+    color: white;
+}
+
+.num {
+    font-size: x-large;
+    color: red;
+}

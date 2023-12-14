@@ -1,0 +1,102 @@
+body {
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.ellipse-1 {
+    background-color: #45597e;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    display: flex;
+    flex-direction: row;
+}
+
+.square-1 {
+    background-color: #F2F2F2;
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+    position: absolute;
+    left: 58%;
+    display: flex;
+    flex-direction: row;
+}
+
+.ellipse-2 {
+    background-color: #45597e;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    display: flex;
+    flex-direction: row;
+    top: 36%;
+}
+
+.square-2 {
+    text-align: right;
+    background-color: #F2F2F2;
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+    position: absolute;
+    left: 10%;
+    display: flex;
+    flex-direction: row;
+    top: 36%;
+}
+
+.ellipse-3 {
+    background-color: #45597e;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    display: flex;
+    flex-direction: row;
+    top: 72%;
+}
+
+.square-3 {
+    background-color: #F2F2F2;
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+    position: absolute;
+    left: 58%;
+    display: flex;
+    flex-direction: row;
+    top: 72%;
+}
+
+.square-4 {
+    margin: 15px;
+    background-color: rgb(0, 255, 0);
+    height: 35px;
+    width: 150px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+
+
+}
+
+p {
+    color: #838383;
+    margin: 15px;
+}
+
+strong {
+    color: black;
+}

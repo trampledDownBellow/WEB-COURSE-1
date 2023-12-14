@@ -1,0 +1,133 @@
+html {
+    background-image: url("file:///C:/Users/stasv/Downloads/FFTablet_1100x.progressive.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.sbtn {
+    color: white;
+    background-color: transparent;
+    border: 0;
+    margin: 40px;
+
+}
+
+.stpj {
+    height: 50px;
+    background-color: transparent;
+    border-width: 2px;
+    border-color: white;
+    color: white;
+    position: absolute;
+    right: 76px;
+    top: 40px;
+}
+
+.anim {
+    margin-left: 8%;
+    width: 5%;
+    vertical-align: middle;
+}
+
+.b-txt {
+    color: white;
+    text-align: center;
+    margin: 5px;
+    left: 15%;
+    font-size: 1100%;
+}
+
+.s-txt {
+    text-align: center;
+    margin: 5px;
+    color: white;
+    font-size: 100%;
+}
+
+.small-txt {
+    position: absolute;
+    color: white;
+    font-size: 140%;
+    bottom: 0;
+    margin: 50px;
+}
+
+.container {
+    width: 100px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    left: 47%;
+    bottom: 5%;
+    font-size: 70%;
+    color: white;
+}
+
+.container>div:not(.arrow) {
+    top: 0;
+    transform-origin: bottom;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    animation:
+        identifier 0.5s both;
+    animation-delay: calc(var(--deg)* 0.25s);
+}
+
+.arrow {
+    transform: rotate(-90deg);
+    width: 50%;
+    margin: auto;
+    opacity: 0.5;
+    animation: identifier1 0.5s both;
+    animation-delay: calc(var(--deg)* 0.25s);
+}
+
+@keyframes identifier {
+    0% {
+        transform:
+            translateX(-50%) translateY(100%)
+    }
+
+    50% {
+        transform:
+            translateX(-50%) translateY(0)
+    }
+
+    100% {
+        transform:
+            translateX(-50%) rotate(calc(var(--deg)* 15deg))
+    }
+}
+
+@keyframes identifier1 {
+
+    0% {
+        opacity: 0;
+        transform: rotate(-90deg) scale(0.5);
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: rotate(-90deg) scale(1);
+    }
+}
+
+.f-imag {
+    height: 12%;
+    width: 12%;
+    position: absolute;
+    bottom: 7%;
+    right: 7%;
+}
